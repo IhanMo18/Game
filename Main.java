@@ -6,7 +6,8 @@ public class Main {
      Gusanito gusanito=new Gusanito();
      char[][]matriz=new char[20][20];
      int large= matriz.length;
-     int location=gusanito.setLocation(matriz);
+     gusanito.setPosicionA(matriz);
+     int location=gusanito.GetLocation();
 
      //Make Field
      for (int i=0;i<large;i++){
@@ -21,6 +22,8 @@ public class Main {
          }
          System.out.println();
      }
+
+
 
 
 
