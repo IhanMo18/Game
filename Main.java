@@ -21,15 +21,13 @@ public class Main {
                 if (i==0 || i==(large-1) || j==0 || j==(large-1)){
                     System.out.print("*");
                 } else if (i==gus.getPosicionX() && j==gus.getPosicionY()) {
-                    System.out.print(">");
+                    System.out.print("@");
                 } else{
                     System.out.print(" ");
                 }
             }
             System.out.println();
         }
-
-
 
         while(play){
          System.out.println("Hacia donde se deseea mover? D/Rigth  A/Left  W/Up  S/Down  Q/Quit");
@@ -56,6 +54,8 @@ public class Main {
                  play=false;
                  break;
              }
+              default:
+                  System.out.println("Caracter No Valido");
           }
 
 
@@ -65,7 +65,7 @@ public class Main {
                     if (i==0 || i==(large-1) || j==0 || j==(large-1)){
                         System.out.print("*");
                     } else if (i==gus.getPosicionX() && j==gus.getPosicionY()) {
-                        System.out.print(">");
+                        System.out.print("@");
                     } else{
                         System.out.print(" ");
                     }
