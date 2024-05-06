@@ -7,22 +7,33 @@ public class Gusanito {
     }
     private int posicionX;
     private int posicionY;
-    int posicionInicial;
-    char[][] field;
-    char[][] worm = new char[posicionX][posicionY];
+    private final char[][] field;
+    private char[][] worm;
 
 
-    public void setPosicionInicial(char[][]matriz) {
-        this.posicionX= matriz.length/2;
-        this.posicionY=matriz[0].length/2;
+   public void SetPosicionXY(){
+       this.posicionX=field.length/2;
+       this.posicionY=field[0].length/2;
+   }
+
+    public int getPosicionX(){
+       return this.posicionX;
+    }
+    public int getPosicionY(){
+       return this.posicionY;
+    }
+
+    public void moveToRight(){
+       posicionX++;
+       posicionY++;
 
     }
-    public int getPosicionInicial(){
-       return posicionInicial;
+
+    public void setWorm() {
+        this.worm=new char[posicionX][posicionY];
     }
-
-    public char[][] MovetToRight(){
-
+    public char[][] getWorm() {
+        return worm;
     }
 
 }
