@@ -29,6 +29,12 @@ public class Gusanito {
     public void moveToLeft(){
        this.posicionY-=1;
     }
+    public void moveToUp(){
+       this.posicionX-=1;
+    }
+    public void moveToDown(){
+       this.posicionX+=1;
+    }
 
     public void setWorm() {
         this.worm=new char[posicionX][posicionY];

@@ -32,25 +32,33 @@ public class Main {
 
 
         while(play){
-         System.out.println("Hacia donde se deseea mover? R/rigth  L/Left  U/Up  D/Down  Q/Quit");
+         System.out.println("Hacia donde se deseea mover? D/Rigth  A/Left  W/Up  S/Down  Q/Quit");
          direction=sc.next();
 
           switch (direction.toLowerCase()){
-             case"r":{
+             case"d":{
                  gus.moveToRight();
                  break;
              }
-              case"l":{
+              case"a":{
                   gus.moveToLeft();
                   break;
               }
-
+              case"w":{
+                  gus.moveToUp();
+                  break;
+              }
+              case "s":{
+                  gus.moveToDown();
+                  break;
+              }
              case "q":{
                  play=false;
                  break;
              }
-
           }
+
+
               for (int i=0;i<large;i++){
 
                 for (int j=0;j<large;j++){
@@ -65,6 +73,7 @@ public class Main {
                 System.out.println();
 
               }
+
         }
 
     }
