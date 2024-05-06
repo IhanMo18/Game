@@ -62,11 +62,12 @@ public class Main {
                 for (int j = 0; j < large; j++) {
                     if (i == 0 || i == (large - 1) || j == 0 || j == (large - 1)) {
                         System.out.print("*");
-                    }if (i == gus.getPosicionX() && j == gus.getPosicionY()) {
+                    } else if (i==gus.getPosicionX() && j==gus.getFoodPosY()) {
+                        System.out.print("*");
+                    }
+                    if (i == gus.getPosicionX() && j == gus.getPosicionY()) {
                         System.out.print("@");
-                    } else if (i== gus.getFoodPosX() && j==gus.getFoodPosY()) {
-                        System.out.println("*");
-                    } else {
+                    }else {
                         System.out.print(" ");
                     }
                 }
