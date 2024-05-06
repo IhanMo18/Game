@@ -47,5 +47,13 @@ public class Gusanito {
         this.posicionY=random.nextInt(17)+1;
     }
 
+    public int getFoodPosX(){
+       return this.foodPosX;
+    }
+    public int getFoodPosY(){
+       return this.foodPosY;
+    }
+
+
 
 }
