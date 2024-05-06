@@ -24,8 +24,8 @@ public class Gusanito {
     }
 
     public void moveToRight(){
-       posicionX++;
-       posicionY++;
+      this.posicionX+=1;
+      this.posicionY+=1;
 
     }
 
