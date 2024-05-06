@@ -3,11 +3,11 @@ package Gusanito;
 public class Main {
 
     public static void main(String[] args) {
-     Gusanito gusanito=new Gusanito();
      char[][]matriz=new char[20][20];
+     Gusanito gusanito=new Gusanito(matriz);
      int large= matriz.length;
-     gusanito.setPosicionA(matriz);
-     int location=gusanito.GetLocation();
+     gusanito.setPosicionInicial(matriz);
+     int location=gusanito.getPosicionInicial();
 
      //Make Field
      for (int i=0;i<large;i++){

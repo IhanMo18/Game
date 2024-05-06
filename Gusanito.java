@@ -2,18 +2,27 @@ package Gusanito;
 
 public class Gusanito {
 
-    private int posicionA;
-   private char[][] cabezaX;
-   private char[][] cabezaY;
-    private char[][] Mov;
+    public Gusanito(char[][] field){
+      this.field=field;
+    }
+    private int posicionX;
+    private int posicionY;
+    int posicionInicial;
+    char[][] field;
+    char[][] worm = new char[posicionX][posicionY];
 
 
-    public void setPosicionA(char[][]matriz) {
-        this.posicionA=matriz.length/2;
+    public void setPosicionInicial(char[][]matriz) {
+        this.posicionX= matriz.length/2;
+        this.posicionY=matriz[0].length/2;
 
     }
-    public int GetLocation(){
-       return posicionA;
+    public int getPosicionInicial(){
+       return posicionInicial;
     }
-    public char[][]MovPosicion(char[] PosicionA)
+
+    public char[][] MovetToRight(){
+
+    }
+
 }
