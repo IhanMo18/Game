@@ -10,8 +10,6 @@ public class Main {
      char[][]field=new char[20][20];
      Gusanito gus =new Gusanito(field);
      gus.SetPosicionXY();
-     int posicionX=gus.getPosicionX();
-     int posicionY=gus.getPosicionY();
      int large= field.length;
      String direction;
      boolean play=true;
@@ -22,7 +20,7 @@ public class Main {
             for (int j=0;j<large;j++){
                 if (i==0 || i==(large-1) || j==0 || j==(large-1)){
                     System.out.print("*");
-                } else if (i==posicionX && j==posicionY) {
+                } else if (i==gus.getPosicionX() && j==gus.getPosicionY()) {
                     System.out.print(">");
                 } else{
                     System.out.print(" ");
@@ -40,9 +38,13 @@ public class Main {
           switch (direction.toLowerCase()){
              case"r":{
                  gus.moveToRight();
-                 System.out.println(posicionX+" "+posicionY);
                  break;
              }
+              case"l":{
+                  gus.moveToLeft();
+                  break;
+              }
+
              case "q":{
                  play=false;
                  break;
@@ -54,7 +56,7 @@ public class Main {
                 for (int j=0;j<large;j++){
                     if (i==0 || i==(large-1) || j==0 || j==(large-1)){
                         System.out.print("*");
-                    } else if (i==posicionX && j==posicionY) {
+                    } else if (i==gus.getPosicionX() && j==gus.getPosicionY()) {
                         System.out.print(">");
                     } else{
                         System.out.print(" ");
