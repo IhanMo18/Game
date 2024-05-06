@@ -43,8 +43,8 @@ public class Gusanito {
 
     public void MakeFoodAleatory(){
         Random random = new Random();
-        this.foodPosX=random.nextInt(17)+1;
-        this.posicionY=random.nextInt(17)+1;
+        this.foodPosX=random.nextInt(15)+1;
+        this.foodPosY=random.nextInt(15)+1;
     }
 
     public int getFoodPosX(){

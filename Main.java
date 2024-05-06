@@ -14,7 +14,7 @@ public class Main {
      String direction;
      boolean play=true;
      System.out.println("Bienvenido a nuestro juego: The Worm!");
-
+     gus.MakeFoodAleatory();
 
         for (int i=0;i<large;i++){
             for (int j=0;j<large;j++){
