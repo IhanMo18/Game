@@ -1,5 +1,7 @@
 package Gusanito;
 
+import java.util.Random;
+
 public class Gusanito {
 
     public Gusanito(char[][] field){
@@ -9,6 +11,9 @@ public class Gusanito {
     private int posicionY;
     private final char[][] field;
     private char[][] worm;
+    private int foodPosX;
+    private int foodPosY;
+
 
 
    public void SetPosicionXY(){
@@ -36,11 +41,11 @@ public class Gusanito {
        this.posicionX+=1;
     }
 
-    public void setWorm() {
-        this.worm=new char[posicionX][posicionY];
+    public void MakeFoodAleatory(){
+        Random random = new Random();
+        this.foodPosX=random.nextInt(17)+1;
+        this.posicionY=random.nextInt(17)+1;
     }
-    public char[][] getWorm() {
-        return worm;
-    }
+
 
 }
